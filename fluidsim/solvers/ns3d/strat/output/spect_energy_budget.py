@@ -112,7 +112,7 @@ class SpectralEnergyBudgetNS3DStrat(SpectralEnergyBudgetNS3D):
 
         for key, value in results.items():
             if key.startswith("transfer_A"):
-                assert value.sum() < 1e-14
+                assert value.sum() < 1e-14, value.sum()
 
         return results
 
